@@ -23877,7 +23877,7 @@ public class ChatActivity extends BaseFragment implements
     private Pattern sponsoredUrlPattern;
     private MessageObject botSponsoredMessage;
     private void addSponsoredMessages(boolean animated) {
-        if (sponsoredMessagesAdded || chatMode != 0 || !ChatObject.isChannel(currentChat) && !UserObject.isBot(currentUser) || !forwardEndReached[0] || getUserConfig().isPremium() && getMessagesController().isSponsoredDisabled() || isReport()) {
+        if (true || sponsoredMessagesAdded || chatMode != 0 || !ChatObject.isChannel(currentChat) && !UserObject.isBot(currentUser) || !forwardEndReached[0] || getUserConfig().isPremium() && getMessagesController().isSponsoredDisabled() || isReport()) {
             return;
         }
         MessagesController.SponsoredMessagesInfo res = getMessagesController().getSponsoredMessages(dialog_id);
@@ -25090,14 +25090,7 @@ public class ChatActivity extends BaseFragment implements
     }
 
     private int getSponsoredMessagesCount() {
-        int sponsoredMessagesCount = 0;
-        while (sponsoredMessagesCount < messages.size()) {
-            if (!messages.get(sponsoredMessagesCount).isSponsored()) {
-                break;
-            }
-            sponsoredMessagesCount++;
-        }
-        return sponsoredMessagesCount;
+        return 0;
     }
 
     private void processDeletedMessages(ArrayList<Integer> markAsDeletedMessages, long channelId, boolean sent) {
