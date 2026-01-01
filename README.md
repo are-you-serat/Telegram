@@ -12,7 +12,3 @@ Client functions:
 5) Local Premium
 
 6) The emulator's detection is disabled
-
-Credits:
-[Ayugram](https://github.com/AyuGram/AyuGram4A)
-[Telegram](https://github.com/DrKLO/Telegram)
